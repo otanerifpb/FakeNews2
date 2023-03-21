@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CadastroActivity"
+    android:orientation = "vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight = "1"
+        android:gravity ="center">
+
+        <TextView
+            android:text="Cadastro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize = "42sp"
+            android:textColor="@color/green"
+            android:textStyle = "bold|italic"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llFrase"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight = "1"
+        android:gravity ="center"
+        android:orientation = "vertical">
+
+        <TextView
+            android:text="Digite sua frase aqui!!"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize = "30sp"
+            android:textColor="@color/black"
+            android:textStyle = "bold|italic"/>
+
+        <EditText
+            android:id="@+id/etFrase"
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize = "22sp"
+            android:backgroundTint="@color/red"
+            android:textStyle = "bold|italic"/>
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/rgEscolher"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight = "1"
+        android:gravity ="center"
+        android:orientation = "horizontal">
+
+        <RadioButton
+            android:id="@+id/rbVerdade"
+            android:text="Verdade"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textSize = "32sp"
+            android:textColor ="@color/green"
+            android:textStyle = "bold|italic"
+            android:layout_marginEnd ="20dp"/>
+
+        <RadioButton
+            android:id="@+id/rbMentira"
+            android:text="Mentira"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textSize = "32sp"
+            android:textColor ="@color/red"
+            android:textStyle = "bold|italic"/>
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/llCadastrar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight = "1"
+        android:gravity ="center"
+        android:orientation = "horizontal">
+
+        <Button
+            android:id="@+id/btSalvar"
+            android:text="Salvar"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:textSize = "25sp"
+            android:backgroundTint="@color/green"
+            android:textStyle = "bold|italic"
+            android:layout_marginEnd ="20dp"/>
+
+        <Button
+            android:id="@+id/btCancelar"
+            android:text="Cancelar"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:textSize = "25sp"
+            android:backgroundTint="@color/red"
+            android:textStyle = "bold|italic"/>
+
+    </LinearLayout>
+
+</LinearLayout>
