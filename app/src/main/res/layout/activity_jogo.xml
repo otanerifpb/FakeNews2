@@ -13,52 +13,90 @@
         android:layout_weight = "1"
         android:gravity ="center">
 
-        <TextView
-            android:text="Verdade ou Mentira"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize = "42sp"
-            android:textColor="@color/red"
-            android:textStyle = "bold|italic"/>
-
+        <ProgressBar
+            android:id="@+id/pbTempo"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity ="center"
+            android:max="10"/>
     </LinearLayout>
 
+
+
     <LinearLayout
-        android:id="@+id/llJogar"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight = "1"
-        android:gravity ="center"
-        android:orientation = "vertical">
+        android:gravity ="center">
 
-        <Button
-            android:id="@+id/btJogar"
-            android:text="Jogar"
+        <TextView
+            android:text="Verdade ou Mentira?!"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize = "32sp"
-            android:backgroundTint="@color/red"
+            android:textColor="@color/blue"
             android:textStyle = "bold|italic"/>
-
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/llCadastrar"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight = "1"
         android:gravity ="center"
         android:orientation = "vertical">
 
+        <TextView
+            android:id="@+id/tvFrase"
+            android:text="Frase do jogo!!"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize = "30sp"
+            android:textColor="@color/black"
+            android:textStyle = "bold|italic"/>
+    </LinearLayout>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight = "1"
+        android:gravity ="center"
+        android:orientation = "horizontal">
+
+        <RadioButton
+            android:id="@+id/rbVerdade"
+            android:text="Verdade"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textSize = "32sp"
+            android:textColor ="@color/green"
+            android:textStyle = "bold|italic"
+            android:layout_marginEnd ="20dp"/>
+
+        <RadioButton
+            android:id="@+id/rbMentira"
+            android:text="Mentira"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textSize = "32sp"
+            android:textColor ="@color/red"
+            android:textStyle = "bold|italic"/>
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight = "1"
+        android:gravity ="center"
+        android:orientation = "horizontal">
+
         <Button
-            android:id="@+id/btCadastrar"
-            android:text="Cadastrar"
+            android:id="@+id/btResponder"
+            android:text="Responder"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize = "25sp"
             android:backgroundTint="@color/green"
-            android:textStyle = "bold|italic"/>
-
+            android:textStyle = "bold|italic"
+            android:layout_marginEnd ="20dp"/>
     </LinearLayout>
-
 </LinearLayout>
