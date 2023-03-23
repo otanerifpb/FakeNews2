@@ -14,11 +14,11 @@
         android:gravity ="center">
 
         <ProgressBar
-            android:id="@+id/pbTempo"
+            android:id="@+id/pbTempoJogo"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:gravity ="center"
-            android:max="10"/>
+            android:max="100"/>
     </LinearLayout>
 
 
@@ -46,7 +46,7 @@
         android:orientation = "vertical">
 
         <TextView
-            android:id="@+id/tvFrase"
+            android:id="@+id/tvFraseJogo"
             android:text="Frase do jogo!!"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -63,7 +63,7 @@
         android:orientation = "horizontal">
 
         <RadioButton
-            android:id="@+id/rbVerdade"
+            android:id="@+id/rbVerdadeJogo"
             android:text="Verdade"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
@@ -73,7 +73,7 @@
             android:layout_marginEnd ="20dp"/>
 
         <RadioButton
-            android:id="@+id/rbMentira"
+            android:id="@+id/rbMentiraJogo"
             android:text="Mentira"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
@@ -90,7 +90,7 @@
         android:orientation = "horizontal">
 
         <Button
-            android:id="@+id/btResponder"
+            android:id="@+id/btResponderJogo"
             android:text="Responder"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -30,7 +30,7 @@
         android:orientation = "vertical">
 
         <Button
-            android:id="@+id/btJogar"
+            android:id="@+id/btJogarMain"
             android:text="Jogar"
             android:layout_width="195dp"
             android:layout_height="wrap_content"
@@ -47,7 +47,7 @@
         android:orientation = "vertical">
 
         <Button
-            android:id="@+id/btCadastrar"
+            android:id="@+id/btCadastrarMain"
             android:text="Cadastrar"
             android:layout_width="195dp"
             android:layout_height="wrap_content"
