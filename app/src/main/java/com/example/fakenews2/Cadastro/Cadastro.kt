@@ -21,7 +21,7 @@ class Cadastro() {
         val frase = Frase(descricao, estado)
         //var frase = Frase
         frases.add(frase)
-        Log.i("APP_LOG", frases.toString())
+        Log.i("APP_LOG", frases.size.toString())
 
     }
 
