@@ -15,6 +15,7 @@ class CadastroActivity : AppCompatActivity() {
     private lateinit var btSalvar: Button
     private lateinit var btCancelar: Button
     private lateinit var cadastro: Cadastro
+    private lateinit var escolha: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,18 +42,28 @@ class CadastroActivity : AppCompatActivity() {
 
     inner class ChangeRadioGroup: RadioGroup.OnCheckedChangeListener{
         override fun onCheckedChanged(group: RadioGroup?, checkedId: Int) {
-            Log.i("LOG", checkedId.toString())
-            Log.i("LOG", rbVerdade.id.toString())
-            Log.i("LOG", rbMentira.id.toString())
+           // Log.i("APP_LOG", checkedId.toString())
+           // Log.i("APP_LOG", rbVerdade.id.toString())
+           // Log.i("APP_LOG", rbMentira.id.toString())
+
+            if (rbVerdade.id.equals(checkedId) ) {
+                escolha = rbVerdade.text.toString()
+                Log.i("APP_LOG", rbVerdade.text.toString())
+            }else {
+                escolha = rbMentira.text.toString()
+                Log.i("APP_LOG", rbMentira.text.toString())
+            }
+
+
         }
     }
 
     fun salvarCadastro() {
-        //val intent = Intent(this, JogoActivity::class.java) /*Informa quem vai controlar a transição*/
-        //startActivity(intent) /*Sinaliza para iniciar a transição*/
-        //val frase =
-        //val valorEscolhido = selec
-        this.cadastro.adicionar(this.etFrase.text.toString(),this.rgEscolher)
+
+        Log.i("APP_LOG",rbVerdade.toString())
+        Log.i("APP_LOG",this.rgEscolher.toString())
+
+        this.cadastro.adicionar(this.etFrase.text.toString(), escolha)
        // Log.i("APP_LOG", this.etFrase.toString())
         Log.i("APP_LOG", "Cadastro salvarCadastro")
         Toast.makeText(this, "Cadastro salvarCadastro", Toast.LENGTH_SHORT).show()

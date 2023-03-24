@@ -1,5 +1,6 @@
 package com.example.fakenews2.Cadastro
 
+import android.util.Log
 import android.widget.RadioGroup
 
 class Cadastro() {
@@ -15,11 +16,12 @@ class Cadastro() {
 //        var estado: Boolean = false
 //    }
 
-    fun adicionar(descricao: String, estado: RadioGroup){
+    fun adicionar(descricao: String, estado: String){
 
         val frase = Frase(descricao, estado)
         //var frase = Frase
         frases.add(frase)
+        Log.i("APP_LOG", frases.toString())
 
     }
 
