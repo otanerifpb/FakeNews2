@@ -30,8 +30,8 @@ class Cadastro() {
         this.frases.add(frase)
     }
 
-    fun size(): String {
-        return this.frases.size.toString()
+    fun size(): Int {
+        return this.frases.size
     }
 
 //    fun get(): Any {
