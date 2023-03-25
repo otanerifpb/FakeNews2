@@ -13,13 +13,20 @@
         android:layout_weight = "1"
         android:gravity ="center">
 
-        <TextView
-            android:text="Jogo da Fake News"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize = "42sp"
-            android:textColor="@color/blue"
-            android:textStyle = "bold|italic"/>
+<!--        <TextView-->
+<!--            android:text="Jogo da Fake News"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textSize = "42sp"-->
+<!--            android:textColor="@color/blue"-->
+<!--            android:textStyle = "bold|italic"/>-->
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_fakenews2"
+            android:background="@color/ic_fakenews2_background"/>
     </LinearLayout>
 
     <LinearLayout
@@ -54,5 +61,17 @@
             android:textSize = "25sp"
             android:backgroundTint="@color/green"
             android:textStyle = "bold|italic"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:id="@+id/tvCadastradas"
+            android:text="0 fofoca(s) cadastrada(s)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
     </LinearLayout>
 </LinearLayout>
