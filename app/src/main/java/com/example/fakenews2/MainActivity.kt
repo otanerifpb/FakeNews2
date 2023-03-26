@@ -60,18 +60,18 @@ class MainActivity : AppCompatActivity() {
         //this.btCadastrar.setOnClickListener({chamarCadastro()})
         //this.btCadastrar.setOnClickListener({chamarJogo()})
 
-        this.btCadastrar.setOnClickListener ({
+        this.btCadastrar.setOnClickListener {
             val intent = Intent(this, CadastroActivity::class.java)
             cadastroResult.launch(intent)
-        })
+        }
 
-        this.btJogar.setOnClickListener({
+        this.btJogar.setOnClickListener{
             val frase = this.cadastro.get()
             val intent = Intent(this, JogoActivity::class.java).apply {
                 putExtra("FRASE", frase)
             }
             jogoResult.launch(intent)
-        })
+        }
     }
 
 //    fun chamarCadastro(){

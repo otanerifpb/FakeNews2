@@ -15,7 +15,11 @@ class CadastroActivity : AppCompatActivity() {
     private lateinit var rbMentira: RadioButton
     private lateinit var btSalvar: Button
     private lateinit var btCancelar: Button
+    private var frases: MutableList<Frase>
 
+    init{
+        this.frases = mutableListOf()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +35,8 @@ class CadastroActivity : AppCompatActivity() {
 
         this.btSalvar.setOnClickListener({salvarCadastro()})
         this.btCancelar.setOnClickListener({cancelarCadastro()})
+
+        rbVerdade.isChecked = true
     }
 
 //    inner class ChangeRadioGroup: RadioGroup.OnCheckedChangeListener{
@@ -52,16 +58,19 @@ class CadastroActivity : AppCompatActivity() {
 //    }
 
     fun salvarCadastro() {
-
         val descricao = this.etFrase.text.toString()
         val estato = this.rbVerdade.isChecked
         val frase = Frase(descricao, estato)
+        frases.add(frase)
+
         val intent = Intent().apply {
             putExtra("FRASE", frase)
+           // putExtras("FRASE", frases)
         }
         setResult(RESULT_OK, intent)
+        this.etFrase.text.clear()
         Log.i("APP_LOG", "Cadastro salvo com sucesso")
-        //Toast.makeText(this, "Cadastro salvarCadastro", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "Cadastro salvarCadastro", Toast.LENGTH_SHORT).show()
         finish()
     }
 

@@ -34,9 +34,6 @@ class Cadastro() {
         return this.frases.size
     }
 
-//    fun get(): Any {
-//        return this.frases.random()
-//    }
    fun get(): Frase {
         return this.frases.random()
    }

@@ -84,7 +84,7 @@
         <Button
             android:id="@+id/btSalvarCadastro"
             android:text="Salvar"
-            android:layout_width="175dp"
+            android:layout_width="165dp"
             android:layout_height="wrap_content"
             android:textSize = "25sp"
             android:backgroundTint="@color/green"
@@ -93,8 +93,8 @@
 
         <Button
             android:id="@+id/btCancelarCadastro"
-            android:text="Cancelar"
-            android:layout_width="175dp"
+            android:text="Voltar"
+            android:layout_width="165dp"
             android:layout_height="wrap_content"
             android:textSize = "25sp"
             android:backgroundTint="@color/red"
