@@ -26,7 +26,7 @@ class Cadastro() {
 //            return null
 //    }
 
-    fun add(frase: Frase) {
+    fun adicionar(frase: Frase) {
         this.frases.add(frase)
     }
 
@@ -34,7 +34,7 @@ class Cadastro() {
         return this.frases.size
     }
 
-   fun get(): Frase {
-        return this.frases.random()
+   fun sortear(): Frase {
+       return this.frases.random()
    }
 }

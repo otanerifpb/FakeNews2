@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
                 } else {
                     it.data?.getSerializableExtra("FRASE")
                 } as Frase
-                this.cadastro.add(frase)
+                this.cadastro.adicionar(frase)
                 this.tvCadastradas.text = "${this.cadastro.size()} frase(s) cadastrada(s)."
                 Toast.makeText(this, "Cadastrada com sucesso!", Toast.LENGTH_SHORT).show()
                 Log.i("APP_LOG", "Cadastrada com sucesso!")
@@ -66,11 +66,17 @@ class MainActivity : AppCompatActivity() {
         }
 
         this.btJogar.setOnClickListener{
-            val frase = this.cadastro.get()
-            val intent = Intent(this, JogoActivity::class.java).apply {
-                putExtra("FRASE", frase)
+            val tamanhoFrase = this.cadastro.size()
+            if (tamanhoFrase == 0){
+                Log.i("APP_LOG", "IF Botão Jogar acionado")
+                Toast.makeText(this, "Você precisa cadastrar as fofocas", Toast.LENGTH_SHORT).show()
+            }else {
+                val frase = this.cadastro.sortear()
+                val intent = Intent(this, JogoActivity::class.java).apply {
+                    putExtra("FRASE", frase)
+                }
+                jogoResult.launch(intent)
             }
-            jogoResult.launch(intent)
         }
     }
 
@@ -87,7 +93,7 @@ class MainActivity : AppCompatActivity() {
 //                } else {
 //                    it.data?.getSerializableExtra("FRASE")
 //                } as Frase
-//                this.cadastro.add(frase)
+//                this.cadastro.adicionar(frase)
 //                this.tvCadastradas.text = "${this.cadastro.size()} frase(s) cadastrada(s)."
 //                Toast.makeText(this, "Cadastrada com sucesso!", Toast.LENGTH_SHORT).show()
 //                Log.i("APP_LOG", "Cadastrada com sucesso!")
@@ -110,7 +116,7 @@ class MainActivity : AppCompatActivity() {
 //                Toast.makeText(this, "Que pena!/n Você Perdeu!", Toast.LENGTH_SHORT).show()
 //            }
 //        }
-//        val frase = this.cadastro.get()
+//        val frase = this.cadastro.sortear()
 //        val intent = Intent(this, JogoActivity::class.java).apply {
 //            putExtra("FOFOCA", frase)
 //        }

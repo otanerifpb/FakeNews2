@@ -52,8 +52,6 @@ class CadastroActivity : AppCompatActivity() {
 //                escolha = rbMentira.text.toString()
 //                Log.i("APP_LOG", rbMentira.text.toString())
 //            }
-//
-//
 //        }
 //    }
 

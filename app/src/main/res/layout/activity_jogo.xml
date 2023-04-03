@@ -13,23 +13,6 @@
         android:layout_weight = "1"
         android:gravity ="center">
 
-        <ProgressBar
-            android:id="@+id/pbTempoJogo"
-            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-            android:layout_width="300dp"
-            android:layout_height="match_parent"
-            android:gravity ="center"
-            android:max="100"/>
-    </LinearLayout>
-
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight = "1"
-        android:gravity ="center">
-
         <TextView
             android:text="Verdade ou Mentira?!"
             android:layout_width="wrap_content"
@@ -98,5 +81,19 @@
             android:backgroundTint="@color/green"
             android:textStyle = "bold|italic"
             android:layout_marginEnd ="20dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:gravity ="center">
+
+        <ProgressBar
+            android:id="@+id/pbTempoJogo"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="300dp"
+            android:layout_height="90dp"
+            android:gravity ="center"
+            android:max="100"/>
     </LinearLayout>
 </LinearLayout>
